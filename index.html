@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/static/logo.jpg" style="width:100%; border-style= solid;">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-grey">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-grey">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>About Me</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-grey">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Contact Me</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">About Me</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">My Work</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact Me</a>
+  </div>
+</div>
+
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+      <h1 class="w3-jumbo"><span class="w3-hide-small">Technology Corrections</h1>
+      <p>Hardware and Software Repair</p>
+      <!--<img src="{ url_for('static', filename='index/coverImg.jpg') }" alt="cover" class="w3-image" width="992" height="1108">-->
+    </header>
+  
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <hr style="width:200px" class="w3-opacity">
+      <p>
+        Technology Corrections is all about correcting your technology, no matter what it might be.
+        <br />
+        We repair a wide variety of devices, from Computers, to Laptops, Fridges, Keurigs, Phones, and similar.
+        <br />
+        We offer affordable and relyable services to our customers, and will do our best so you can get back to doing yours.
+        <br />
+        <br />
+        Please note: We reserve the right to refuse service provided the device is too damaged or beyond our ability to handle with our tools.
+        We do not price match, offer multi day payment plans, discounts, or use your personal information (Phone number, Email), for any marketing purpose.
+      </p>
+      
+      <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">1</span><br>
+          Jobs Completed
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">0</span><br>
+          Reviews
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">1</span><br>
+          Team Members
+        </div><br />
+      </div>
+      
+      <!-- Grid for pricing tables -->
+      <h3 class="w3-padding-16 w3-text-light-grey">Pricing</h3>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-dark-grey w3-xlarge w3-padding-32">Computers<br />(Desktops or Laptops)</li>
+            <li class="w3-padding-16">General Repair - $20/h</li>
+            <li class="w3-padding-16">Hard Drive Swap/Upgrade - $15</li>
+            <li class="w3-padding-16">Ram Upgrade/Replacement - $10</li>
+            <li class="w3-padding-16">*CPU/GPU Upgrade/Replacement - $40</li>
+            <li class="w3-padding-16">**Internal Battery + LAN/WAN Card Replacement - $20</li>
+            <li class="w3-padding-16">* - Mainly Desktops <br /> ** - Mainly Laptops <br /> Part cost not included</li>
+          </ul>
+        </div>
+  
+        <div class="w3-third">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-dark-grey w3-xlarge w3-padding-32">Phones <br /> (Usually 2019 or Older)</li>
+            <li class="w3-padding-16">Battery Replacement - $40</li>
+            <li class="w3-padding-16">Screen Replacement - $50 - $70</li>
+            <li class="w3-padding-16">*Camera/Sensor Replacement - $40 - $60</li>
+            <li class="w3-padding-16">*Mainboard Replacement - $60 - $90</li>
+            <li class="w3-padding-16">* - Succsess/Fix not guaranteed</li>
+          </ul>
+        </div>
+
+        <div class="w3-third">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-dark-grey w3-xlarge w3-padding-32">General Maintance <br /> + 3D Printing</li>
+            <li class="w3-padding-16">General Repair (Low Voltage Systems) - $60/h</li>
+            <li class="w3-padding-16">General Repair (High Voltage >= 120V) - $80/h</li>
+            <li class="w3-padding-16">3D Printing Custom Parts - $20 + Material Cost</li>
+            <li class="w3-padding-16">Laser Etching Parts - $40</li>
+          </ul>
+        </div>
+      <!-- End Grid/Pricing tables -->
+      </div>
+      <!-- Testimonials -->
+      <!--
+      <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+      <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+      <p>John Doe saved us from a web disaster.</p><br>
+      
+      <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+      <p>No one is better than John Doe.</p>
+      -->
+    <!-- End About Section -->
+    </div>
+    
+    <!-- Portfolio Section 
+    <div class="w3-padding-64 w3-content" id="photos">
+      <h2 class="w3-text-light-grey">My Photos</h2>
+      <hr style="width:200px" class="w3-opacity">
+    -->
+      <!-- Grid for photos 
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="/w3images/wedding.jpg" style="width:100%">
+          <img src="/w3images/rocks.jpg" style="width:100%">
+          <img src="/w3images/sailboat.jpg" style="width:100%">
+        </div>
+  
+        <div class="w3-half">
+          <img src="/w3images/underwater.jpg" style="width:100%">
+          <img src="/w3images/chef.jpg" style="width:100%">
+          <img src="/w3images/wedding.jpg" style="width:100%">
+          <img src="/w3images/p6.jpg" style="width:100%">
+        </div>
+      End photo grid -->
+      </div>
+    <!-- End Portfolio Section -->
+    </div>
+  
+    <!-- Contact Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+      <h2>Contact</h2>
+      <hr style="width:200px" class="w3-opacity">
+  
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Redford Michigan, US</p>
+        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +1 (313) 380-1580</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: contact@technologycorrections.com</p>
+      </div><br>
+      <p>Send an Inquire:</p>
+  
+      <form action="/contactsend" target="_blank">
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Job Type" required name="Job Type"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> Send Inquire
+          </button>
+        </p>
+      </form>
+    <!-- End Contact Section -->
+    </div>
+
+{% endblock %}
